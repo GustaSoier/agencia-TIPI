@@ -1,0 +1,586 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo:ital,wght@0,100;0,200;0,300;0,400;1,200;1,400;1,600&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  /* 
+  font-family: 'Anton', sans-serif;
+    font-family: 'Exo', sans-serif;
+    font-family: 'Inter', sans-serif;
+
+  */
+
+h2,h3,h4,a,button{
+    color: #c66600;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+}
+body{
+    background-color: #ffffff;
+}
+.site{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Exo', sans-serif;
+
+
+}
+
+/* aqui está começando o topo*/
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topo nav ul{
+    display: flex;
+    text-align: center;
+} 
+
+.topo h1{
+    background: url(../img/logo01.svg) no-repeat;
+    width:300px;
+    height: 52px;
+    text-indent: -9999px;
+}
+
+/* aqui está começando o menu*/
+.menu a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 40px;
+    color: rgb(0, 0, 0);
+    margin-right: 10px;
+    border-radius: 10px 10px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.menu a:hover{
+    background-color: #999999;
+}
+
+.ativo{
+    color: #cb6600 !important;
+}
+
+/* aqui está começando a rede social*/
+
+.redeSocialTopo a{
+    text-decoration: none;
+    padding: 10px 18px;
+    background: rgb(209, 87, 87);
+   border-radius: 20px;
+   color: aliceblue;
+   display: block;
+   text-indent: -9999px;
+   margin-right: 15px;
+}
+
+.redeSocialTopo{
+    text-align: center;
+}
+
+.redeSocialTopo a:hover{
+    background-color: rgb(56, 51, 51);
+}
+
+.redeSocialTopo ul{
+    display: flex;
+    text-align: center;
+}
+
+.redeSocialTopo button{
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    border-radius: 8px;
+    padding: 5px 20px;
+    margin-bottom: 10;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.redeSocialTopo button:hover{
+    background-color: #000000;
+}
+
+.redeSocialTopo ul li:nth-child(1) a{
+    background: url(../img/redeSocial/facepreto.svg) no-repeat;
+}
+
+.redeSocialTopo ul li:nth-child(1) a:hover{
+    background: url(../img/redeSocial/facebook.svg) no-repeat;
+}
+
+.redeSocialTopo ul li:nth-child(2) a{
+    background: url(../img/redeSocial/instaPreto.svg) no-repeat;
+}
+
+.redeSocialTopo ul li:nth-child(2) a:hover{
+    background: url(../img/redeSocial/instagram.svg) no-repeat;
+}
+
+.redeSocialTopo ul li:nth-child(3) a{
+    background: url(../img/redeSocial/WhatsPreto.svg) no-repeat;
+}
+
+.redeSocialTopo ul li:nth-child(3) a:hover{
+    background: url(../img/redeSocial/WhatsVerde.svg) no-repeat;
+}
+.redeSocialTopo ul li:last-child a{
+    margin-right: 0;
+}
+
+.redeSocialTopo{
+    margin-bottom: 40px;
+}
+
+/* aqui está começando o banner*/
+.banner img{
+    width: 100%;
+}
+
+.banner .slick-next {
+    right: 40px;
+}
+
+.banner .slick-prev:before, .banner .slick-next:before{
+    font-size: 40px;
+    color: #c66600;
+}
+
+.banner .slick-prev{
+    left: 25px;
+    z-index: 1;
+}
+
+.banner .slick-dots{
+    bottom: 25px;
+}
+
+.banner .slick-dots li button:before{
+    color: #c66600;
+    font-size: 30px;
+}
+
+.banner .slick-dots li .slick-active button:before{
+    opacity: .75;
+    color: #5d3002;
+}
+.banner .slick-dots li{
+    margin: 0 15px;
+}
+
+/* aqui esta comçando o sobre */
+.sobre{
+    padding: 50px 0;
+}
+
+.sobre div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sobre div div{
+    flex-direction: column;
+    width: 45%;
+    justify-content: flex-start;
+    
+}
+
+.sobre div div:nth-child(1){
+    justify-content: flex-start;
+    border: solid 1px #333;
+    border-radius: 30px;
+    padding: 0 20px;
+}
+
+.sobre div button{
+    margin-bottom: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px 15px;
+    border: solid 1px black;
+    font-weight: bold;
+    padding: 8px 12px;
+    
+}
+
+.sobre button:hover{
+    background-color: #000000;
+    border: none;
+    
+}
+
+.sobre div h2{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    
+}
+
+.sobre p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 35px;
+    flex-grow: 1;
+}
+
+.sobre img{
+    width: 100%;
+    border: solid 1px rgb(59,255,5);
+    border-radius: 5px 15px;
+}
+
+/* aqui esta começando o serviço */
+
+.siteserv{
+    padding: 50px 0;
+    text-align: center;
+    background: url(../img/fundoservicoopacidade.png) no-repeat center;
+    background-attachment: fixed;
+    min-height: 500px;
+}
+.servico{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Exo', sans-serif;
+}
+
+.servico div{
+    max-width: 300px;
+    width: 100%;  
+    text-align: end;
+}
+
+.servico div h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.siteserv h2{
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+
+.servico div img{
+    margin:  20px 20px;
+}
+
+.servico div p{
+    text-align: justify;
+    margin-bottom: 90px;
+    color: rgb(0, 0, 0);
+}
+
+.servico div button{
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #cb6600;
+    color: #ffffff;
+    padding: 7px 10px;
+    border: none;
+}
+
+.servico div{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* galeria */
+
+.galeria img{
+    border-radius: 20px;
+    margin: 30px 0;
+    width: 75% !important;
+}
+
+.galeria img:nth-child(1){
+    margin-left: 45px;
+}
+
+.galeria .slick-next {
+    right: 20px;
+}
+
+.slick-next:before {
+    content: '→';
+    color: #c66600;
+    font-size: 30px;
+}
+
+.galeria .slick-prev:before, .banner .slick-next:before{
+    font-size: 30px;   
+    color: #c66600;
+}
+
+.galeria .slick-prev{
+    left: 10px;
+    z-index: 1;
+}
+
+/* depoimentos */
+.depoimento{
+    background: url(../img/fundoservicoopacidade.png) no-repeat center;
+    background-attachment: fixed;
+}
+
+.depoimento h2{
+    font-weight: bold;
+    padding-top: 40px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.cont-depoimento{
+    display: flex;
+}
+
+.cont-depoimento img{
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.slideDepo{
+    text-align: center;
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-left: 20px;
+    height: 300px;
+    padding: 30px 50px 30px 50px;
+    width: 60%;
+}
+
+.slideDepo img{
+    border: none;
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.slideDepo .slick-next {
+    right: 20px;
+}
+
+.slick-next:before {
+    content: '→';
+    color: #c66600;
+    font-size: 30px;
+}
+
+.slideDepo .slick-prev:before, .banner .slick-next:before{
+    font-size: 30px;   
+    color: #c66600;
+}
+
+.slideDepo .slick-prev{
+    left: 10px;
+    z-index: 1;
+}
+
+.dataNome{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+/* blog */
+
+.blog h2{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cont-blog{
+    display: flex;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 0 30px;
+}
+
+.cont-blog div{
+    padding: 10px 10px;
+    margin: 0 30px;
+    background-color: #333;
+}
+
+.cont-blog h3{
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.cont-blog p{
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.cont-blog button{
+    margin-left: 190px;
+    margin-bottom: 5px;
+    margin-top: 80px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #cb6600;
+    color: #ffffff;
+    padding: 7px 10px;
+    border: none;
+}
+
+/* footer */
+
+.rodape{
+    padding: 50px;
+}
+
+.imgRoda{
+    background-image: url(../img/fundoservicoopacidade.png);
+    background-attachment: fixed;
+    min-height: 500px;
+}
+
+.cont-roda{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Anton', sans-serif;
+    margin-top: 20px;
+}
+
+.caixa1-roda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    padding: 20px;
+    line-height: 40px;
+    height: 375px;
+}
+
+.caixa1-roda h2{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.caixa1-roda h3{
+    color: rgb(70, 70, 70);
+}
+
+.caixa1-roda img{
+    margin-top: 15px;
+    height: 60px;
+}
+
+.caixa1-roda ul{
+    justify-content: center;
+    display: flex;
+    
+}
+.caixa1-roda a{
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    flex-wrap: wrap;
+}
+
+.caixa1-roda a:hover{
+    color: #c66600;
+}
+
+.caixa1-roda ul li a{
+    text-decoration: none;
+    padding: 10px 18px;
+    background: rgb(209, 87, 87);
+   border-radius: 20px;
+   color: aliceblue;
+   display: block;
+   text-indent: -9999px;
+    margin-right: 15px;
+    margin-left: 20px;
+    display: block;
+}
+
+.caixa1-roda ul li:nth-child(1) a{
+    background: url(../img/redeSocial/facebook.svg) no-repeat;
+}
+
+.caixa1-roda ul li:nth-child(2) a{
+    background: url(../img/redeSocial/instagram.svg) no-repeat;
+}
+
+.caixa1-roda ul li:nth-child(3) a{
+    background: url(../img/redeSocial/WhatsVerde.svg) no-repeat;
+
+}
+
+.caixa2-roda{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    padding: 20px;
+    line-height: 30px;
+    height: 375px;
+}
+
+.caixa2-roda h2{
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.caixa2-roda ul li a{
+    text-decoration: none;
+    color: rgb(70, 70, 70);
+    margin: 15px 0;
+    display: block;
+
+}
+
+.caixa2-roda ul li a:hover{
+    color: #c66600;
+}
+
+/* fim do rodape */
+
+
+.direitosReservados h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: rgb(70, 70, 70);
+}
+
+.desenvolvido h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #ffffff;
+    background-color: grey;
+    height: 50px;
+}
