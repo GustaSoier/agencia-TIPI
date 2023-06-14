@@ -16,6 +16,7 @@ h2,h3,h4,a,button{
 body{
     background-color: #ffffff;
 }
+
 .site{
     max-width: 1200px;
     width: 100%;
@@ -88,7 +89,7 @@ body{
 
 .redeSocialTopo ul{
     display: flex;
-    text-align: center;
+    text-align: cen;
 }
 
 .redeSocialTopo button{
@@ -147,7 +148,7 @@ body{
 }
 
 .banner .slick-prev:before, .banner .slick-next:before{
-    font-size: 40px;
+    font-size: 30px;
     color: #c66600;
 }
 
@@ -256,9 +257,12 @@ body{
 }
 
 .servico div{
-    max-width: 300px;
-    width: 100%;  
-    text-align: end;
+    margin:  5%;
+    width: 30%;  
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 .servico div h2{
@@ -270,6 +274,10 @@ body{
     color: rgb(0, 0, 0);
 }
 
+.servico div p{
+    margin-bottom: 70px;
+}
+
 .siteserv h2{
     text-align: center;
     margin-bottom: 50px;
@@ -279,19 +287,14 @@ body{
     letter-spacing: 3px;
 }
 
-.servico div img{
+.servico img{
     margin:  20px 20px;
-}
-
-.servico div p{
-    text-align: justify;
-    margin-bottom: 90px;
-    color: rgb(0, 0, 0);
 }
 
 .servico div button{
     cursor: pointer;
     border-radius: 10px;
+    float: right;
     font-size: 16px;
     background-color: #cb6600;
     color: #ffffff;
@@ -299,14 +302,7 @@ body{
     border: none;
 }
 
-.servico div{
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
 /* galeria */
-
 .galeria img{
     border-radius: 20px;
     margin: 30px 0;
@@ -403,6 +399,7 @@ body{
     justify-content: space-around;
     margin-top: 80px;
 }
+
 /* blog */
 
 .blog h2{
@@ -564,8 +561,7 @@ body{
     color: #c66600;
 }
 
-/* fim do rodape */
-
+/* direitos reservados */
 
 .direitosReservados h2{
     display: flex;
@@ -584,3 +580,313 @@ body{
     background-color: grey;
     height: 50px;
 }
+/* daqui pra cima é 1200px para PC */
+
+
+/* 601 até 900px para not - INICIO*/
+/* 601 até 900px para not - FIM*/
+
+
+@media not all and (max-width: 600px){
+    .abrir-menu, .fechar-menu{
+        display: none;
+    }
+
+}
+/* ################################# */
+
+
+/* 0 a 600px para celular - INICIO */
+@media (max-width: 600px){ 
+/* #region reponsive sobre*/
+    .topo{
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .menu{
+        background-color: #4c4c4c;
+        height: 100%;
+        position: fixed;
+        margin: 0;
+        top: 0;
+        right: -350px;
+        max-width: 350px;
+        width: 50%;
+        z-index: 9;                         
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .abrir-menu{
+        background: url(../img/btn-menu.png);
+        background-size: cover;
+        display: block;
+        padding: 20px;
+        border: 0;
+    }
+
+    .fechar-menu{
+        background: url(../img/btn-fechar.png);
+        background-size: cover;
+        display: block;
+        padding: 20px;
+        border: 0;
+    }
+    
+    .menu-ativo .menu{
+        right: 0;
+        
+    }
+    .banner{
+        display: none;
+    }
+
+    .sobre div{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sobre div div{
+        width: 90%;
+        margin-bottom: 5%;
+        justify-content: flex-start;
+    }
+
+    .sobre div:nth-child(2){
+        width: 90%;
+        border: solid 1px rgb(59,255,5);
+        border-radius: 10px 10px;
+        order: -1;
+    }
+
+    .sobre p{
+        text-align: justify;
+        font-size: 18px;
+        line-height: 35px;
+        flex-grow: 1;
+    }
+    /* #endregion reponsive sobre*/
+
+/* #region responsive serviços */
+    .siteserv{
+        padding: 50px 0;
+        text-align: center;
+        background: url(../img/fundoservicoopacidade.png) no-repeat center;
+        background-attachment: fixed;
+        min-height: 500px;
+    }
+
+    .servico{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .servico div{
+        
+        width: 85%;
+        margin-bottom: 5%;
+        background-color: #ffffff;
+    }
+    
+    .servico img{
+        margin:  20px 20px;
+    }
+    
+    .servico div p{
+        text-align: justify;
+        margin-bottom: 90px;
+        font-size: 17px;
+        color: rgb(0, 0, 0);
+    }
+
+/* #endregion responsive serviços */
+
+/* #region responsive galeria */
+.galeria img{
+    border-radius: 20px;
+    margin: 30px 0;
+    width: 70% !important;
+}
+
+.galeria img:nth-child(1){
+    margin-left: 45px;
+}
+
+.galeria .slick-next {
+    right: 20px;
+}
+
+.slick-next:before {
+    content: '→';
+    color: #c66600;
+    font-size: 25px;
+}
+
+.galeria .slick-prev:before, .banner .slick-next:before{
+    font-size: 30px;   
+    color: #c66600;
+}
+
+.galeria .slick-prev{
+    left: 10px;
+    z-index: 1;
+}
+
+/* #endregion responsive galeria */
+
+/* #region responsive depoimento */
+
+.cont-depoimento{
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont-depoimento img{
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.slideDepo{
+    text-align: center;
+    border: solid 1px #000000;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-left: 20px;
+    height: 300px;
+    padding: 30px 50px 30px 50px;
+    width: 60%;
+}
+
+.slideDepo img{
+    border: none;
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.slideDepo .slick-next {
+    right: 20px;
+}
+
+.slick-next:before {
+    content: '→';
+    color: #c66600;
+    font-size: 30px;
+}
+
+.slideDepo .slick-prev:before, .banner .slick-next:before{
+    font-size: 30px;   
+    color: #c66600;
+}
+
+.slideDepo .slick-prev{
+    left: 10px;
+    z-index: 1;
+}
+
+.dataNome{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+/* #endregion responsive depoimento */
+
+/* #region responsive blog */
+
+.blog h2{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.cont-blog{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 0 30px;
+}
+
+.cont-blog div{
+    width: 75%;
+    padding: 10px 10px;
+    margin-bottom: 5%;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+.cont-blog p{
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+/* #endregion responsive blog */
+
+/* #region responsive rodapé */
+
+.rodape{
+    padding: 0;
+}
+
+.cont-roda{
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-around;
+    font-family: 'Anton', sans-serif;
+    margin-top: 20px;
+}
+
+.caixa1-roda{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    line-height: 40px;
+    height: 375px;
+}
+
+.caixa2-roda{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    margin-bottom: 5%;
+    padding: 20px;
+    line-height: 30px;
+    height: 375px;
+}
+/* #endregion responsive rodapé */
+
+/* #region responsive direitos reservados */
+.direitosReservados h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: rgb(70, 70, 70);
+}
+
+.desenvolvido h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: #ffffff;
+    background-color: grey;
+    height: 50px;
+}
+
+/* #endregion responsive direitos reservados */
+}
+/* 601 a 900px para celular - FIM */
