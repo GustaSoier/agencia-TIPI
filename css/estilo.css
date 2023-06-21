@@ -1,32 +1,39 @@
+/* #region global */
 
+/* este link é para importar uma font do google fonts */
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo:ital,wght@0,100;0,200;0,300;0,400;1,200;1,400;1,600&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-  /* 
-  font-family: 'Anton', sans-serif;
+
+/* essas fontes comentadas são para eu copiar e colar quando eu for usá-las */
+    /* font-family: 'Anton', sans-serif;
     font-family: 'Exo', sans-serif;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; */
 
-  */
 
+/* aqui eu ja deixei todos os h2, h3, h4, a e os botões com a mesma estilização para nao precisa mudar 1 por 1 depois*/
 h2,h3,h4,a,button{
     color: #c66600;
     font-family: 'Anton', sans-serif;
     font-size: 20px;
 }
+
+/* esse tag body eu usei para mudar a cor de todo o site */
 body{
     background-color: #ffffff;
 }
 
+/* aqui foi uma estiização do site em geral no qual eu defini a largura maxima que o site pode ocupar, a margin e a font que seria aplicada para todas as classes que tivessem esse .site */
 .site{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     font-family: 'Exo', sans-serif;
-
-
 }
+  /* #endregion global */
 
-/* aqui está começando o topo*/
+/* #region topo*/
+
+/* aqui foi para deixar os elementos do topo um do lado do outro, com espaçamento e para alinhas os itens no centro na vertical */
 .topo{
     display: flex;
     justify-content: space-between;
@@ -35,9 +42,9 @@ body{
 
 .topo nav ul{
     display: flex;
-    text-align: center;
 } 
 
+/* no H1 eu usei uma imagem para melhorar o mecanismo de busca */
 .topo h1{
     background: url(../img/logo01.svg) no-repeat;
     width:300px;
@@ -45,7 +52,11 @@ body{
     text-indent: -9999px;
 }
 
-/* aqui está começando o menu*/
+.menu{
+    display: flex;
+    align-items: center;
+}
+
 .menu a {
     color: black;
     text-decoration: none;
@@ -66,8 +77,7 @@ body{
     color: #cb6600 !important;
 }
 
-/* aqui está começando a rede social*/
-
+/* aqui foi para estilizar as redes sociais, pois eu paguei os nomes e coloquei preto e branco e ao passar o mouse elas ficam coloridas das redes sociais */
 .redeSocialTopo a{
     text-decoration: none;
     padding: 10px 18px;
@@ -137,12 +147,16 @@ body{
 .redeSocialTopo{
     margin-bottom: 40px;
 }
+/* #endregion topo*/
 
-/* aqui está começando o banner*/
+/* #region banner*/
+
+/* aqui eu especifiquei para o bannner pegar 100% da largura */
 .banner img{
     width: 100%;
 }
 
+/* daqui para baixo eu estilizei a parte do carrosel como as setinhas e os dots */
 .banner .slick-next {
     right: 40px;
 }
@@ -173,8 +187,11 @@ body{
 .banner .slick-dots li{
     margin: 0 15px;
 }
+/* #endregion banner */
 
-/* aqui esta comçando o sobre */
+/* #region sobre*/
+
+/* coloquei para toda a section da parte do sobre pegar um espaçamento de 50px de cima e de baixo */
 .sobre{
     padding: 50px 0;
 }
@@ -184,6 +201,7 @@ body{
     justify-content: space-around;
 }
 
+/* deixei a div em coluna, defini a largura e coloquei o conteúdo no começo na vertical */
 .sobre div div{
     flex-direction: column;
     width: 45%;
@@ -191,6 +209,7 @@ body{
     
 }
 
+/* aqui eu coloquei um pseudo-elemento para chamar somente  o 1° filho */
 .sobre div div:nth-child(1){
     justify-content: flex-start;
     border: solid 1px #333;
@@ -198,6 +217,7 @@ body{
     padding: 0 20px;
 }
 
+/* aqui eu estilizei os botão */
 .sobre div button{
     margin-bottom: 20px;
     align-self: flex-end;
@@ -211,12 +231,13 @@ body{
     
 }
 
+/* estilizei o botão ao passar o mouse */
 .sobre button:hover{
     background-color: #000000;
     border: none;
-    
 }
 
+/* coloquei o H2 no centro, margem do topo, um peso para a fonte ficar escura, aumentei o tamanhoo da fonte, deixei todas as letras maiusculas, margem para baixo e um espaçamento entre as letras */
 .sobre div h2{
     text-align: center;
     margin-top: 20px;
@@ -225,9 +246,9 @@ body{
     text-transform: uppercase;
     margin-bottom: 50px;
     letter-spacing: 3px;
-    
 }
 
+/* coloquei para o texto ficar justificado, coloquei tamanho para o parágrafo, altura da linha e dei um flex glow (espaçamento) para o botão pegar distância do parágrafo */
 .sobre p{
     text-align: justify;
     font-size: 20px;
@@ -235,14 +256,17 @@ body{
     flex-grow: 1;
 }
 
+/* coloquei a imagem para ocupar 100% da largura da tela, uma borda e o arredondamento das bordas */
 .sobre img{
     width: 100%;
     border: solid 1px rgb(59,255,5);
     border-radius: 5px 15px;
 }
+/* #endregion sobre */
 
-/* aqui esta começando o serviço */
+/* #region serviço */
 
+/* esta classe pega toda a parte de serviço por isso eu coloquei a imagem nela */
 .siteserv{
     padding: 50px 0;
     text-align: center;
@@ -250,34 +274,8 @@ body{
     background-attachment: fixed;
     min-height: 500px;
 }
-.servico{
-    display: flex;
-    justify-content: space-around;
-    font-family: 'Exo', sans-serif;
-}
 
-.servico div{
-    margin:  5%;
-    width: 30%;  
-    text-align: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.servico div h2{
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-}
-
-.servico div p{
-    margin-bottom: 70px;
-}
-
+/* coloquei um estilo para o H2 do serviço */
 .siteserv h2{
     text-align: center;
     margin-bottom: 50px;
@@ -287,10 +285,44 @@ body{
     letter-spacing: 3px;
 }
 
-.servico img{
-    margin:  20px 20px;
+/* coloquei para eles ficarem um ao lado do outro */
+.servico{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Exo', sans-serif;
 }
 
+/* aqui eu estilizei as divs diretamente */
+.servico div{
+    margin: 2%;
+    width: 30%;  
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* estilizei o H2 de todas as divs */
+.servico div h2{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+/* coloquei estilo para os parágrafos dentro das divs */
+.servico div p{
+    margin-bottom: 70px;
+}
+
+/* dei uma margem para a imagem */
+.servico img{
+    margin:  20px 10px;
+}
+
+/* estilizei os botões das divs */
 .servico div button{
     cursor: pointer;
     border-radius: 10px;
@@ -302,17 +334,23 @@ body{
     border: none;
 }
 
-/* galeria */
+/* #endregion serviço */
+
+/* #region galeria */
+
+/* dei um arredondamento de borda de 20px para todas as imagens, margem de 30px para cime e baixo e coloqeui para ela ocuparem 75% da largura */
 .galeria img{
     border-radius: 20px;
     margin: 30px 0;
     width: 75% !important;
 }
 
+/* peguei somente a primeira imagem e deu uma margem de 45px da esquerda */
 .galeria img:nth-child(1){
     margin-left: 45px;
 }
 
+/* daqui para baixo eu estilizei as setas do carrosel */
 .galeria .slick-next {
     right: 20px;
 }
@@ -332,13 +370,17 @@ body{
     left: 10px;
     z-index: 1;
 }
+/* #endregion galeria */
 
-/* depoimentos */
+/* #region depoimentos */
+
+/* coloquei uma imagem de fundo nessa classe que abrange toda a seção de depoimento */
 .depoimento{
     background: url(../img/fundoservicoopacidade.png) no-repeat center;
     background-attachment: fixed;
 }
 
+/* estilizei o H2 do depoimento */
 .depoimento h2{
     font-weight: bold;
     padding-top: 40px;
@@ -348,15 +390,18 @@ body{
     margin-bottom: 30px;
 }
 
+/* deixei todo o conteúdo do depoimento um lado do outro */
 .cont-depoimento{
     display: flex;
 }
 
+/* dei um arredondamento de borda de 20px e dei uma margem de 50px para baixo */
 .cont-depoimento img{
     border-radius: 20px;
     margin-bottom: 50px;
 }
 
+/* criei essa classe para estilizar a parte que iria ter o carrosel do depoimento*/
 .slideDepo{
     text-align: center;
     border: solid 1px #000000;
@@ -368,12 +413,14 @@ body{
     width: 60%;
 }
 
+/* tirei as bordas da imgem, deixei ele em linha e dei uma margem de 20px para baixo */
 .slideDepo img{
     border: none;
     display: inline;
     margin-bottom: 20px;
 }
 
+/* daqui para baixo eu estilizei as setas do carrosel */
 .slideDepo .slick-next {
     right: 20px;
 }
@@ -394,14 +441,17 @@ body{
     z-index: 1;
 }
 
+/* essa classe eu criei para chamar especificamente a parte da data e do nome do depoimento */
 .dataNome{
     display: flex;
     justify-content: space-around;
     margin-top: 80px;
 }
+/* #endregion depoimentos */
 
-/* blog */
+/* #region blog */
 
+/* estilizei o H2 (título principal do blog) */
 .blog h2{
     text-align: center;
     margin-top: 40px;
@@ -412,6 +462,7 @@ body{
     font-weight: bold;
 }
 
+/* coloquei o conteúdo do blog um do lado do outro e alinhei o texto no centro */
 .cont-blog{
     display: flex;
     text-align: center;
@@ -419,22 +470,27 @@ body{
     margin: 0 30px;
 }
 
+/* aqui eu chamei as divs do blog */
 .cont-blog div{
     padding: 10px 10px;
     margin: 0 30px;
     background-color: #333;
 }
 
+/* estilizei os títulos dentro das divs */
 .cont-blog h3{
     font-size: 25px;
     margin: 15px 0;
 }
 
+/* estilizei todos os parágrafos do blog */
 .cont-blog p{
     margin-top: 20px;
     color: #ffffff;
 }
 
+
+/* aqui eu estilizei os botões dentro das divs */
 .cont-blog button{
     margin-left: 190px;
     margin-bottom: 5px;
@@ -447,19 +503,23 @@ body{
     padding: 7px 10px;
     border: none;
 }
+/* #endregion blog */
 
-/* footer */
+/* #region rodapé */
 
+/* dei um espaçamento de 50px para todos os lados */
 .rodape{
     padding: 50px;
 }
 
+/* criei essa classe para deixar a imagem pegando todo o fundo do rodapé */
 .imgRoda{
     background-image: url(../img/fundoservicoopacidade.png);
     background-attachment: fixed;
     min-height: 500px;
 }
 
+/* essa classe pega todo o conteúdo do rodapé, deixei um ao lado do outro, alinhei os itens ao centro, dei um espaçamento igual entre eles e uma margem de 20px para cima*/
 .cont-roda{
     display: flex;
     align-items: center;
@@ -468,6 +528,7 @@ body{
     margin-top: 20px;
 }
 
+/* aqui eu chamei somente a primeira caixa do rodapé */
 .caixa1-roda{
     display: flex;
     flex-direction: column;
@@ -480,35 +541,43 @@ body{
     height: 375px;
 }
 
+/* aqui eu chamei o título da primeira caixa do rodapé */
 .caixa1-roda h2{
     font-size: 25px;
     text-transform: uppercase;
 }
 
+/* aqui eu estilizei os H3 da primeira caixa */
 .caixa1-roda h3{
     color: rgb(70, 70, 70);
 }
 
+/* estilizei a imagem da primeira caixa */
 .caixa1-roda img{
     margin-top: 15px;
     height: 60px;
 }
 
+/* coloquei um estilo para a lista não ordenada */
 .caixa1-roda ul{
     justify-content: center;
     display: flex;
     
 }
+
+/* aqui eu estiizei os links diretamente neles */
 .caixa1-roda a{
     text-decoration: none;
     color: rgb(70, 70, 70);
     flex-wrap: wrap;
 }
 
+/* aqui eu estilizei os links ao passar o mouse */
 .caixa1-roda a:hover{
     color: #c66600;
 }
 
+/* aqui eu estilizei os links da parte de rede social da primeira caixa */
 .caixa1-roda ul li a{
     text-decoration: none;
     padding: 10px 18px;
@@ -519,22 +588,24 @@ body{
    text-indent: -9999px;
     margin-right: 15px;
     margin-left: 20px;
-    display: block;
 }
 
+/* coloquei uma imagem a invés de um link no Facebook */
 .caixa1-roda ul li:nth-child(1) a{
     background: url(../img/redeSocial/facebook.svg) no-repeat;
 }
 
+/* coloquei uma imagem a invés de um link no Instagram */
 .caixa1-roda ul li:nth-child(2) a{
     background: url(../img/redeSocial/instagram.svg) no-repeat;
 }
 
+/* coloquei uma imagem a invés de um link no WhatsApp */
 .caixa1-roda ul li:nth-child(3) a{
     background: url(../img/redeSocial/WhatsVerde.svg) no-repeat;
-
 }
 
+/* dei um estilo para todo o texto da segunda caixa ficar no centro, uma cor de fundo para ele, um espaçamento de 20px para todos os lados, uma largura de 45% de toda a largura e uma altura de 375px */
 .caixa2-roda{
     text-align: center;
     background-color: rgb(255, 255, 255);
@@ -544,11 +615,13 @@ body{
     height: 375px;
 }
 
+/* aqui eu estilizei o título principal da segunda caixa */
 .caixa2-roda h2{
     font-size: 25px;
     text-transform: uppercase;
 }
 
+/* estilizei os links da segunda caixa */
 .caixa2-roda ul li a{
     text-decoration: none;
     color: rgb(70, 70, 70);
@@ -557,12 +630,15 @@ body{
 
 }
 
+/* aqui eu estilizei como ficaria os links ao passar o mouse da segunda caixa */
 .caixa2-roda ul li a:hover{
     color: #c66600;
 }
+/* #endregion rodapé */
 
-/* direitos reservados */
+/* #region direitos reservados */
 
+/* aqui eu estilizei o H2 do direitos reservados  */
 .direitosReservados h2{
     display: flex;
     align-items: center;
@@ -571,6 +647,7 @@ body{
     color: rgb(70, 70, 70);
 }
 
+/* aqui eu estilizei o H2 da parte de desenvolvido por mim */
 .desenvolvido h2{
     display: flex;
     align-items: center;
@@ -580,32 +657,146 @@ body{
     background-color: grey;
     height: 50px;
 }
+/* #endregion rodapé */
 /* daqui pra cima é 1200px para PC */
 
 
-/* 601 até 900px para not - INICIO*/
-/* 601 até 900px para not - FIM*/
+/* ############################################################################################################# */
 
+
+/* #region responsive */
+
+
+/* nesta parte do responsivo eu apenas peguei oque já estava feito e fui "compactando" para celular, tablet e notebook */
+
+
+/* 601 até 900px para not - INICIO*/
+@media (max-width: 900px){
+/* #region responsive topo */
+.topo{
+    flex-direction: column;
+}
+
+.topo div nav{
+    display: flex;
+    align-items: center;
+} 
+
+.topo h1{
+    margin: 5% 0;
+}
+/* #endregion responsive topo */
+
+/* #region responsive sobre */
+.sobre p{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 22px;
+    flex-grow: 1;
+}
+/* #endregion responsive topo */
+
+/*#region responsive serviço */
+.servico div{
+    margin: auto;
+    width: 25%;
+}
+
+.servico img{
+    width: 100%;
+    margin: 20px auto;
+}
+/* #endregion responsive serviços */
+
+/* #region responsive depoimento */
+.cont-depoimento{
+    justify-content: space-around;
+}
+.cont-depoimento img{
+    margin-left: 4%;
+}
+
+.slick-dots{
+    display: none;
+}
+
+.slideDepo{
+    width: 55%;
+}
+/* #endregion responsive depoimento */
+
+/* #region responsive blog */
+.cont-blog div{
+    width: 25%;
+    margin: 20px auto;
+}
+
+.cont-blog img{
+    width: 100%;
+}
+
+.cont-blog button{
+    margin-left: 0;
+}
+/* #endregion responsive blog */
+
+/* #region responsive rodape */
+.rodape{
+    padding: 0;
+}
+
+.caixa1-roda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    padding: 20px;
+    line-height: 40px;
+    height: 375px;
+    margin-top: 5%;
+}
+
+.caixa2-roda{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    padding: 20px;
+    line-height: 30px;
+    height: 375px;
+    margin-top: 5%;
+}
+/* #endregion responsive rodape */
+}
+
+/* 601 até 900px para not - FIM*/
 
 @media not all and (max-width: 600px){
     .abrir-menu, .fechar-menu{
         display: none;
     }
-
 }
-/* ################################# */
+
+/* ############################################################################################################ */
 
 
 /* 0 a 600px para celular - INICIO */
 @media (max-width: 600px){ 
 /* #region reponsive sobre*/
     .topo{
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 5%;
+    flex-direction: row;
+    }
+
+    .topo div nav{
+        align-items: start;
+        flex-direction: column;
     }
 
     .menu{
-        background-color: #4c4c4c;
+        background-color: rgba(76, 76, 76, 0.95);
         height: 100%;
         position: fixed;
         margin: 0;
@@ -613,11 +804,21 @@ body{
         right: -350px;
         max-width: 350px;
         width: 50%;
-        z-index: 9;                         
+        z-index: 9;    
+        transition: right .6s ease-out;                     
     }
 
     .menu ul{
         flex-direction: column;
+    }
+
+    .menu ul li{
+        margin: 5% 0;
+    }
+
+    .menu a{
+        color: #f2f2f2;
+        letter-spacing: 3px;    
     }
 
     .abrir-menu{
@@ -634,12 +835,26 @@ body{
         display: block;
         padding: 20px;
         border: 0;
+        margin: 5%;
     }
     
     .menu-ativo .menu{
         right: 0;
-        
     }
+
+    .redeSocialTopo{
+        margin-top: 15%;
+    }
+
+    .redeSocialTopo ul{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .redeSocialTopo a{
+        padding: 12px 25px;
+    }
+    
     .banner{
         display: none;
     }
@@ -685,14 +900,16 @@ body{
     }
     
     .servico div{
-        
         width: 85%;
         margin-bottom: 5%;
         background-color: #ffffff;
     }
     
     .servico img{
-        margin:  20px 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
     }
     
     .servico div p{
@@ -712,7 +929,7 @@ body{
 }
 
 .galeria img:nth-child(1){
-    margin-left: 45px;
+    margin-left: 15%;
 }
 
 .galeria .slick-next {
@@ -757,8 +974,12 @@ body{
     margin-left: 20px;
     height: 300px;
     padding: 30px 50px 30px 50px;
-    width: 60%;
+    width: 80%;
 }
+
+.slideDepo p{
+    font-size: 90%
+};
 
 .slideDepo img{
     border: none;
@@ -813,6 +1034,10 @@ body{
     margin: 0 30px;
 }
 
+.blog img{
+    width: 90%;
+}
+
 .cont-blog div{
     width: 75%;
     padding: 10px 10px;
@@ -824,6 +1049,10 @@ body{
 .cont-blog p{
     margin-top: 20px;
     color: #ffffff;
+}
+
+.cont-blog button{
+    margin-left: 0;
 }
 
 /* #endregion responsive blog */
@@ -890,3 +1119,5 @@ body{
 /* #endregion responsive direitos reservados */
 }
 /* 601 a 900px para celular - FIM */
+
+/* #endregion responsive */

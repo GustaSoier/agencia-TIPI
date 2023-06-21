@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência TIPI</title>
 
+    <!-- esses links são para chamar pastaas de estilização para o site -->
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="stylesheet" href="css/slick.css">
@@ -18,9 +19,13 @@
      <!--Fazendo o corpo do página-->
     <header class="site topo">
         <h1>Agência TIPI</h1>
+        <div>
+            <!-- esses botões são para o menu hamurguer do mobile -->
         <button class="abrir-menu"></button>
             <nav class="menu">
         <button class="fechar-menu"></button>
+
+        <!-- esses são os links do navbar -->
                 <div>
                 <ul>
                     <li><a href="#" class="ativo">Home</a></li>
@@ -30,6 +35,7 @@
                 </ul>
             </div>
 
+            <!-- esses são os links das redes sociais da nav -->
             <div class="redeSocialTopo">
                 <button>Login</button>
             <ul>
@@ -37,16 +43,19 @@
                 <li><a href="#">Instagram</a></li>
                 <li><a href="#">WhatsApp</a></li>
             </ul>
-                </div>
+            </div>
             </nav>
+        </div>
     </header>     
 
     <!--começando conteúdo importante-->
+
 <main>
+    <!-- essa parte tem varios banners para o carrosel funcionar e as imagens irem trocando -->
     <section class="banner">
-        <img src="img/banner1.png" alt="Banner TIPI">
-        <img src="img/banner1.png" alt="Banner TIPI">
-        <img src="img/banner1.png" alt="Banner TIPI">
+        <img src="img/banner.png" alt="Banner TIPI">
+        <img src="img/banner.png" alt="Banner TIPI">
+        <img src="img/banner.png" alt="Banner TIPI">
      </section>
     
      <section class="sobre">
@@ -57,7 +66,6 @@
                 <p>A Agência TIPI é uma empresa de desenvolvimento web que atua no mercado oferecendo soluções personalizadas e inovadoras para seus clientes. Com um time de profissionais altamente qualificados e experientes, a Agência TIPI se destaca pela sua capacidade de entender as necessidades de seus clientes e entregar projetos de alta qualidade, com prazos e custos competitivos.</p>            
                 <button>Leia mais</button>
         </div>
-            
 
             <div>
                 <img src="img/sobre.png" alt="Imagem sobre">
@@ -65,8 +73,12 @@
 
     </div>
     </section>
+
+    <!-- aqui começa a parte de serviços -->
     <section class="siteserv">
         <h2>Serviços</h2>
+
+        <!-- aqui eu fiz z parte dos serviços com um h2, imagem, paragrafo e botão para todos eles -->
         <div class="servico site">
             
             <div>
@@ -91,7 +103,9 @@
         </div>
     </section>
 
+    <!-- aqui começa a parte da galeria -->
     <section class="galeria">
+        <!-- nessa parte eu coloquei varias imagemns para o carrosel ir para o lado e trocar as imagens -->
         <img src="img/galeria1.png" alt="Foto 1">
         <img src="img/galeria2.png" alt="Foto 2">
         <img src="img/galeria3.png" alt="Foto 3">
@@ -106,6 +120,7 @@
         <img src="img/galeria6.png" alt="Foto 12">
     </section>
 
+    <!-- aqui começa a parte de depoimento -->
     <section class="depoimento">
         <div class="site">
             <h2>Depoimentos</h2>
@@ -114,8 +129,9 @@
                     <img src="img/depoimento.png" alt="Foto depoimento">
                 </div>
 
+                <!-- eu coloquei a classe dele como slick para la no CSS eu saber que essa parte vou colocar carrosel -->
                 <div class="slideDepo">
-
+                <!-- eu criei 3 divs de depoimento para o carrosel ir para o lado e trocar as divs -->
                 <div>
                         <img src="img/avatar.png" alt="Avatar">
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quidem error hic est fugiat consequatur esse libero, totam consectetur maiores iste ratione pariatur in sit magnam. Temporibus provident nobis totam.</p>
@@ -147,10 +163,13 @@
             </div>
         </div>
     </section>
+    
 <!-- aqui é a parte do blog -->
     <section class="blog site">
         <h2>Blog</h2>
+
         <div class="cont-blog">
+            <!-- essa parte é o blog, foi feita com a mesma estrutura da parte de serviços -->
             <div class="blog1">
                 <h3>Blog 1</h3>
                 <img src="img/blog1.png" alt="imagem ficticia com fundo preto">
@@ -173,10 +192,13 @@
         </div>
     </section>
 </main>
+
     <!-- aqui começa o rodape -->
 <section class="imgRoda">
 <footer class="rodape site">
     <div class="cont-roda">
+
+        <!-- esta aqui é a primeira caixa do rodapé -->
         <div class="caixa1-roda">
             <h2>Informações</h2>
             <img src="img/logo02.svg" alt="Logo">
@@ -191,6 +213,7 @@
             <h3>Seg - Sex da 10h as 16h</h3>
         </div>
 
+        <!-- esta aqui é a segunda caixa do rodapé -->
         <div class="caixa2-roda">
            <h2>Menu</h2>
            <ul>
@@ -205,7 +228,9 @@
     </div>
 </section>
 
+<!-- aqui é a parte dos direitos reservados -->
 <section>
+    <!-- eu criei 2 divs para que cada dos H2 ficassem em blocos diferentes -->
     <div class="direitosReservados">
         <h2>Direitos reservados ao Senac SMP - TIPI 01 - 2023</h2>
     </div>
@@ -214,6 +239,10 @@
     </div>
 </section>
     </footer>
+    <!-- aqui terminou o site -->
+
+
+    
 
  <!-- pra colocar animações em js tem que chamar ele antes de fechar a tag body -->
 

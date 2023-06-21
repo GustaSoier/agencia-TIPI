@@ -1,3 +1,4 @@
+// aqui é a parte de colocar carrosel em partes específicas do site
 $('.banner').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -20,6 +21,10 @@ $('.galeria').slick({
   autoplay: true,
   autoplaySpeed: 2000,
 
+
+
+
+// aqui é para a galeria de imagem saber quantas imagens ela deve mostrar de acordo com o breakpoint (ponto de quebra)
 responsive: [
 {
   breakpoint: 1024,
@@ -47,7 +52,7 @@ responsive: [
 });
 
 
-// MENU MOBILE
+// aqui é para dar uma função ao clicar no menu mobile
 document.querySelector(".abrir-menu").onclick = function () {
   document.documentElement.classList.add("menu-ativo");
 }
