@@ -11,13 +11,15 @@
 
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <link rel="stylesheet" href="css/estilo.css">
 
 </head>
 <body>
      <!--Fazendo o corpo do página-->
-    <header class="site topo">
+    <header class="site topo" id="topoFixo">
         <h1>Agência TIPI</h1>
         <div>
             <!-- esses botões são para o menu hamurguer do mobile -->
@@ -58,7 +60,7 @@
         <img src="img/banner.png" alt="Banner TIPI">
      </section>
     
-     <section class="sobre">
+     <section data-aos="fade-up" class="sobre">
         <div class="site">
 
         <div>
@@ -75,7 +77,7 @@
     </section>
 
     <!-- aqui começa a parte de serviços -->
-    <section class="siteserv">
+    <section data-aos="fade-up" class="siteserv">
         <h2>Serviços</h2>
 
         <!-- aqui eu fiz z parte dos serviços com um h2, imagem, paragrafo e botão para todos eles -->
@@ -104,7 +106,7 @@
     </section>
 
     <!-- aqui começa a parte da galeria -->
-    <section class="galeria">
+    <section data-aos="fade-up" class="galeria">
         <!-- nessa parte eu coloquei varias imagemns para o carrosel ir para o lado e trocar as imagens -->
         <img src="img/galeria1.png" alt="Foto 1">
         <img src="img/galeria2.png" alt="Foto 2">
@@ -121,7 +123,7 @@
     </section>
 
     <!-- aqui começa a parte de depoimento -->
-    <section class="depoimento">
+    <section data-aos="fade-up" class="depoimento">
         <div class="site">
             <h2>Depoimentos</h2>
             <div class="cont-depoimento">
@@ -165,7 +167,7 @@
     </section>
     
 <!-- aqui é a parte do blog -->
-    <section class="blog site">
+    <section data-aos="fade-up" class="blog site">
         <h2>Blog</h2>
 
         <div class="cont-blog">
@@ -195,7 +197,7 @@
 
     <!-- aqui começa o rodape -->
 <section class="imgRoda">
-<footer class="rodape site">
+<footer data-aos="fade-up" class="rodape site">
     <div class="cont-roda">
 
         <!-- esta aqui é a primeira caixa do rodapé -->
@@ -252,7 +254,12 @@
     <!-- aqui é pra chamar o arquivo js de animaçoes e precisa ser puxar da biblioteca para acha-lo -->
     <script src="js/slick.js"></script>
 
+        <!-- animações AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <!-- eu abri a pasta de animações de js -->
     <script src="js/script.js"></script>
+
+    
 </body>
 </html>

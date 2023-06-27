@@ -9,6 +9,9 @@
     font-family: 'Exo', sans-serif;
     font-family: 'Inter', sans-serif; */
 
+*{
+    font-size: 20px;
+}
 
 /* aqui eu ja deixei todos os h2, h3, h4, a e os botões com a mesma estilização para nao precisa mudar 1 por 1 depois*/
 h2,h3,h4,a,button{
@@ -38,6 +41,18 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.menu-fixo{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: fadeIn 2s ease-in-out;
+    margin: 0 auto;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .topo nav ul{
@@ -271,6 +286,7 @@ body{
     padding: 50px 0;
     text-align: center;
     background: url(../img/fundoservicoopacidade.png) no-repeat center;
+    background-size: cover;
     background-attachment: fixed;
     min-height: 500px;
 }
@@ -658,6 +674,93 @@ body{
     height: 50px;
 }
 /* #endregion rodapé */
+
+
+
+/* #region PHP */
+
+/* #region página contato PHP */
+.form{
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.form h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 5px;
+}
+
+.form form{
+    display: flex;
+    justify-content: space-around;
+    padding: 2.5%;
+    border: solid 1px #333;
+    border-radius: 25px;
+}
+
+.form form div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form input, .form textarea{
+    width: 98%;
+    padding: 2% 0;
+    margin-bottom: 5%;
+    background-color: #fff;
+    color: #c66600;
+    font-size: 1em;
+    font-weight: 500;
+    border: solid 1px #333;
+    text-indent: 10px;
+}
+
+.form textarea{
+    resize: none;
+    height: 175px;
+}
+
+.form form div:nth-child(2) div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 98%;
+}
+
+.form input::placeholder, .form textarea::placeholder{
+    color: #c66600;
+    font-size: 1em;
+    text-indent: 10px;
+}
+
+.form form input[type=submit], .form form button{
+    width: 45%;
+    color: #333;
+    background-color: #c66600;
+    font-family: 'Anton', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    border: solid 1px #333;
+}
+
+.form form input[type=submit]:hover, .form form button:hover{
+    background-color: #333;
+    color: #c66600;
+}
+
+/* #endregion página contato PHP */
+
+/* #endregion PHP */
+
+
+
 /* daqui pra cima é 1200px para PC */
 
 
@@ -890,6 +993,7 @@ body{
         padding: 50px 0;
         text-align: center;
         background: url(../img/fundoservicoopacidade.png) no-repeat center;
+        background-size: cover;
         background-attachment: fixed;
         min-height: 500px;
     }

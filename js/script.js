@@ -60,3 +60,47 @@ document.querySelector(".abrir-menu").onclick = function () {
 document.querySelector(".fechar-menu").onclick = function () {
   document.documentElement.classList.remove("menu-ativo")
 }
+
+// animação AOS
+AOS.init();
+
+
+// menu fixo
+window.onscroll = function(){
+  var top = window.scrollY || document.documentElement.scrollTop;
+  console.log(top);
+
+  if(top > 800){
+    console.log("Adicionar meu menu fixo");
+    document.getElementById("topoFixo").classList.add("menu-fixo")
+    document.getElementById("topoFixo").classList.remove("site")
+  }
+
+  else{
+    console.log("Remover meu menu fixo");
+    document.getElementById("topoFixo").classList.remove("menu-fixo")
+    document.getElementById("topoFixo").classList.add("site")
+  }
+}
+
+
+// formulario
+function formWhats(){
+  var nome = '*Nome: *' + document.getElementById("nome").value;
+  var email = '*Email: *' + document.getElementById("email").value;
+  var tel = '*Fone: *' + document.getElementById("tel").value;
+  var mens = '*Mensagem: *' + document.getElementById("mens").value;
+
+  var agencia = '*Agênci TIPI*';
+  var assunto = 'Mensagem do site!';
+
+  var numFone = '5511953710475'
+  var quebraDeLinha = '%0A'
+
+    if(email== ''){
+      alert ("O campo de e-mail é obrigatório");
+    }
+
+    window.open('https://api.whatsapp.com/send?phone=' + numFone)
+
+}
