@@ -19,24 +19,93 @@
 </head>
 <body>
 
-<?php require_once('conteudo/topo.php'); ?>
-
-<main>
-
+    <?php require_once('conteudo/topo.php'); ?>
     <?php require_once('conteudo/banner.php'); ?>
-    <?php require('conteudo/sobre-conteudo.php'); ?>
-    <?php require('conteudo/sobre-conteudo.php'); ?>
-    <?php require('conteudo/sobre-conteudo.php'); ?>
-    <?php require('conteudo/sobre-conteudo.php'); ?>
-    <?php require_once('conteudo/servico-conteudo.php'); ?>
-    <?php require_once('conteudo/galeria.php'); ?>
 
-</main>
+    <main>
+        <section class="sobre1">
+            <div class="site">
+                <div id="contsobre1">
+                    <h2>Sobre Agencia</h2>
+                    <p>A Agência TIPI é uma empresa de desenvolvimento web que atua no mercado oferecendo soluções
+                        personalizadas e inovadoras para seus clientes. Com um time de profissionais altamente
+                        qualificados e experientes, a Agência TIPI se destaca pela sua capacidade de entender as
+                        necessidades de seus clientes e entregar projetos de alta qualidade, com prazos e custos
+                        competitivos.</p>
+                    <button>Saiba mais</button>
+                </div>
 
-<footer>
-    <?php require_once('conteudo/rodape.php'); ?>
-    <?php require_once('conteudo/direitos.php'); ?>
+                <div class="sobre-img1">
+                    <img src="img/sobre.png">
+                </div>
+            </div>
+        </section>
+
+        <!-- sobre2 -->
+
+        <section data-aos="fade-up" class="sobre2">
+            <div class="site">
+                <div class="sobre-img2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <img src="img/missao-tipi.png">
+                </div>
+
+                <div id="contsobre2">
+                    <h2>Sobre Agencia</h2>
+                    <p>A Agência TIPI é uma empresa de desenvolvimento web que atua no mercado oferecendo soluções
+                        personalizadas e inovadoras para seus clientes. Com um time de profissionais altamente
+                        qualificados e experientes, a Agência TIPI se destaca pela sua capacidade de entender as
+                        necessidades de seus clientes e entregar projetos de alta qualidade, com prazos e custos
+                        competitivos.</p>
+                    <button>Saiba mais</button>
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up" class="sobre1">
+            <div class="site">
+                <div id="contsobre1">
+                    <h2>Sobre Agencia</h2>
+                    <p>A Agência TIPI é uma empresa de desenvolvimento web que atua no mercado oferecendo soluções
+                        personalizadas e inovadoras para seus clientes. Com um time de profissionais altamente
+                        qualificados e experientes, a Agência TIPI se destaca pela sua capacidade de entender as
+                        necessidades de seus clientes e entregar projetos de alta qualidade, com prazos e custos
+                        competitivos.</p>
+                    <button>Saiba mais</button>
+
+                </div>
+
+                <div class="sobre-img1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <img src="img/visao-tipi.png">
+                </div>
+            </div>
+        </section>
+
+        <section data-aos="fade-up" class="sobre4">
+            <div class="site">
+                <div class="sobre-img2" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <img src="img/valores-tipi.png">
+                </div>
+
+                <div id="contsobre4">
+                    <h2>Sobre Agencia</h2>
+                    <p>A Agência TIPI é uma empresa de desenvolvimento web que atua no mercado oferecendo soluções
+                        personalizadas e inovadoras para seus clientes. Com um time de profissionais altamente
+                        qualificados e experientes, a Agência TIPI se destaca pela sua capacidade de entender as
+                        necessidades de seus clientes e entregar projetos de alta qualidade, com prazos e custos
+                        competitivos.</p>
+                    <button>Saiba mais</button>
+                </div>
+            </div>
+        </section>
+
+        <?php require_once('conteudo/servico-conteudo.php'); ?>
+        <?php require_once('conteudo/galeria.php'); ?>
+
+<footer class="rodape">
+     <?php require_once('conteudo/rodape.php'); ?>
 </footer>
+
+    </main>
     
 
     <!-- aqui é pra chamar o aquivo js da biblioteca -->

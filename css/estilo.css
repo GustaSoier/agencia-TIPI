@@ -757,6 +757,304 @@ body{
 
 /* #endregion página contato PHP */
 
+
+/* region página sobre PHP */
+.sobre1{
+    padding: 50px 0px; 
+}
+
+.sobre1 div{
+    display: flex;
+    justify-content: space-around;
+}
+  
+#titulo{
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 5px;
+}
+  
+.sobre1 div div {
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-around;
+}
+  
+#contsobre1{
+    border: solid thin #333;
+    border: solid 2px;
+    border-radius: 25px;
+    padding: 20px 5px;
+    text-align: center;
+}
+  
+.sobre1 div div:nth-child(1){
+    justify-content: center;
+}
+  
+.sobre1 div div h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+}
+  
+.sobre1 div div p{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    flex-grow: 1;
+    text-align: none;
+    font-weight: bold;
+}
+
+.sobre1 button{
+    align-self: end;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #cb6600;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+  
+.sobre1 button:hover{
+    background-color: rgb(33, 122, 150);
+}
+  
+.sobre1 img{
+    width: 100%;
+    border: solid 2px #333;
+    border-radius: 15px 15px;
+}
+  
+
+  /*Sobre 2*/
+.sobre2{
+    padding: 50px 0px;
+}
+  
+.sobre2 div {
+    display: flex;
+    justify-content: space-around;
+}
+  
+#titulo{
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 5px;
+}
+  
+.sobre2 div div{
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-around;
+}
+  
+#contsobre2{
+    border: solid thin #333;
+    border: solid 2px;
+    border-radius: 25px;
+    padding: 20px 5px;
+    text-align: center;
+}
+  
+.sobre2 div div:nth-child(1){
+    justify-content: center;
+}
+  
+.sobre2 div div h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+  
+    }
+  
+.sobre2 div div p{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    flex-grow: 1;
+    text-align: none;
+    font-weight: bold;
+}
+  
+.sobre2 button{
+    align-self: end;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #cb6600;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+  
+.sobre2 button:hover{
+    background-color: rgb(33, 122, 150);
+}
+  
+.sobre2 img{
+    width: 100%;
+    border: solid 2px #333;
+    border-radius: 15px 15px;
+}
+  
+  /*Sobre 3*/
+.sobre3 div div{
+    flex-direction: column;
+    width: 45%;
+    justify-content: space-around;
+}
+  
+#contsobre3{
+    border: solid thin #333;
+    border: solid 2px;
+    border-radius: 25px;
+    padding: 20px 5px;
+    text-align: center;
+}
+  
+.sobre3 div div:nth-child(1){
+    justify-content: center;
+}
+   
+.sobre3 div div h2{
+    text-align: center;
+    font-family: antn;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+}
+  
+.sobre3 div div p{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    flex-grow: 1;
+    text-align: none;
+    font-weight: bold;
+}
+  
+.sobre3 button{
+    align-self: end;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #cb6600;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+  
+.sobre3 button:hover{
+    background-color: rgb(33, 122, 150);
+}
+  
+.sobre3 img{
+    width: 100%;
+    border: solid 2px #333;
+    border-radius: 15px 15px;
+}
+  
+  /*Sobre 4*/
+.sobre4{
+    padding: 50px 0px;
+}
+  
+.sobre4 div{
+    display: flex;
+    justify-content: space-around;
+}
+  
+#titulo{
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 5px;
+}
+  
+.sobre4 div div{
+    flex-direction: column;
+    width: 45%; 
+    justify-content: space-around;
+}
+  
+#contsobre4{
+    border: solid thin #333;
+    border: solid 2px;
+    border-radius: 25px;
+    padding: 20px 5px;
+    text-align: center;
+}
+  
+.sobre4 div div:nth-child(1){
+    justify-content: center;
+}
+  
+.sobre4 div div h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    color: #cb6600;
+    font-family: "Anton", sans-serif;
+}
+  
+.sobre4 div div p{
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    flex-grow: 1;
+    text-align: none;
+    font-weight: bold;
+}
+  
+.sobre4 button{
+    align-self: end;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #cb6600;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+}
+  
+.sobre4 button:hover{
+    background-color: rgb(33, 122, 150);
+}
+  
+.sobre4 img{
+    width: 100%;
+    border: solid 2px #333;
+    border-radius: 15px 15px;
+}
+/* #endregion página sobre PHP */
 /* #endregion PHP */
 
 
