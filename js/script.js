@@ -86,6 +86,8 @@ window.onscroll = function(){
 
 // formulario
 function formWhats(){
+
+  var form = document.getElementById('formContato');
   var nome = '*Nome: *' + document.getElementById("nome").value;
   var email = '*Email: *' + document.getElementById("email").value;
   var tel = '*Fone: *' + document.getElementById("tel").value;
@@ -93,14 +95,27 @@ function formWhats(){
 
   var agencia = '*Agênci TIPI*';
   var assunto = 'Mensagem do site!';
+  
+
 
   var numFone = '5511953710475'
   var quebraDeLinha = '%0A'
 
-    if(email== ''){
-      alert ("O campo de e-mail é obrigatório");
-    }
+  if(tel == ''){
+    console.log(TESTE)
+    alert ("O campo de celular é obrigatório");
+    return;}
+  else{
+  tel = '*Fone: *' + document.getElementById('tel').value;
+  }
 
-    window.open('https://api.whatsapp.com/send?phone=' + numFone)
+   window.open('https://api.whatsapp.com/send?phone=' + 
+    numFone + '&text=' + 
+    assunto + ' - ' + agencia + quebraDeLinha + quebraDeLinha +
+    nome + quebraDeLinha +
+    email + quebraDeLinha +
+    tel + quebraDeLinha +
+    mens, '_blank');
 
+    form.reset();
 }

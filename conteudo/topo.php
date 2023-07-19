@@ -6,13 +6,18 @@
     <nav class="menu">
 <button class="fechar-menu"></button>
 
-<!-- esses são os links do navbar -->
+<?php
+    $url = $_SERVER['REQUEST_URI'];
+    $urlBase = basename($url)
+    // echo $urlBase;
+?>
+
         <div>
         <ul>
-            <li><a href="index.php" class="ativo">Home</a></li>
-            <li><a href="sobre.php">Sobre</a></li>
-            <li><a href="servico.php">Serviços</a></li>
-            <li><a href="contato.php">Contato</a></li>
+            <li><a href="index.php" <?php if($urlBase == 'index.php') echo 'class="ativo"'; ?>>Home</a></li>
+            <li><a href="sobre.php" <?php if($urlBase == 'sobre.php') echo 'class="ativo"'; ?>>Sobre</a></li>
+            <li><a href="servico.php" <?php if($urlBase == 'servico.php') echo 'class="ativo"'; ?>>Serviços</a></li>
+            <li><a href="contato.php" <?php if($urlBase == 'contato.php') echo 'class="ativo"'; ?>>Contato</a></li>
         </ul>
     </div>
 

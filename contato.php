@@ -1,3 +1,84 @@
+<?php
+
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+$ok = 0;
+
+if (isset($_POST["email"])) {
+
+//Load Composer's autoloader
+require 'mailer/Exception.php';
+require 'mailer/PHPMailer.php';
+require 'mailer/SMTP.php';
+
+//Create an instance; passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+try {
+    //Server settings
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.hostinger.com';     //mudar o nome de acordo com o site de hospedagem
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'ascensaodev@smpsistema.com.br';      //trocar de acordo com o email de disparo
+    $mail->Password   = 'Senac@agencia04';      //trocar de acordo com a senha do email
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Port       = 465;                                    //mudar de acordo com a porta da hospedagem; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+    //Recipients
+    $mail->setFrom('ascensaodev@smpsistema.com.br', 'Site agência TIPI');  // adicionar qual email vai enviar a mensagem e qual sera a mensagem
+    $mail->addAddress('gsampaiosoier0@gmail.com');     //adicionar qual email vai receber
+
+/*
+    $mail->addAddress('ellen@example.com');               //Name is optional
+    $mail->addReplyTo('info@example.com', 'Information');
+    $mail->addCC('cc@example.com');
+    $mail->addBCC('bcc@example.com');
+
+    //Attachments
+    $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+*/
+
+    //Content
+    // dados do email
+    $nome = $_POST['nome']; 
+    $email = $_POST['email'];
+    $tel = $_POST['tel'];
+    $mens = $_POST['mens'];
+
+    $mail->isHTML(true);                               
+    $mail->Subject = 'Site agência TIPI';
+    $mail->Body    = "
+        nome: $nome <br>
+        E-mail: $email <br>
+        Telefone: $tel <br>
+        Mensagem: $mens
+        ";
+
+    $mail->AltBody = "
+    nome: $nome <br>
+    E-mail: $email <br>
+    Telefone: $tel <br>
+    Mensagem: $mens
+    ";
+
+    $mail->send();
+    $ok = 1;
+    // echo 'Mensagem enviada com SUCESSO!';
+} catch (Exception $e) {
+    $ok = 2;
+    echo "ERRROOO... Tente mais tarde: {$mail->ErrorInfo}";
+}
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,19 +111,28 @@
     <div class="site">
         <h2>Formulário de contato</h2>
         <div>
-            <form action="#" method="post">
+            <form action="#" method="post" id="formContato">
             <div>
                 <input type="text" id="nome" name="nome" placeholder="Informe seu nome:">
                 <input type="email" id="email" name="email" required placeholder="Informe seu email:">
                 <input type="tel" id="tel" name="tel" placeholder="Informe seu telefone:">
-                <h3>Mensagem enviada com sucesso!!!</h3>
+                <h3>
+                <?php
+                    if($ok == 1){
+                        echo $nome . ", sua mensagem foi enviada com sucesso!!!";
+                    }elseif($ok == 2){
+                        echo $nome . ", erro ao enviar sua mensagem. Tente mais tarde";
+                    }
+                ?>
+                </h3>
+
             </div>
 
             <div>
                 <textarea name="mens" id="mens" cols="30" rows="10" placeholder="Informe sua mensagem:"></textarea>
                 <div>
                 <input type="submit" value="Enviar via e-mail">
-                <button onclick="formWhats()">Enviar via WhatsApp</button>
+                <button onclick="event.preventDefault(); formWhats()">Enviar via WhatsApp</button>
                 </div>
             </div>
             </form>
