@@ -11,4 +11,13 @@ class ServicoClass{
     public $textoServico;
     public $linkServico;
     public $statusServico;
+
+    // MÉTODOS 
+    public function listar(){
+        $query = "SELECT * FROM tblservico WHERE statusServico = 1 ORDER BY tituloServico ASC";
+        $conn = Conexao::LigarConexao();
+        $resultado = $conn->query($query);
+        $lista = $resultado -> fetchAll();
+        return $lista;
+    }
 }   

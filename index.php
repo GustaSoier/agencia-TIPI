@@ -1,3 +1,11 @@
+<?php
+    require_once('admin/class/servico.php');
+    $listaServico = new ServicoClass();
+    $listar = $listaServico ->Listar();
+    var_dump($listar); 
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agência TIPI</title>
 
-    <!-- esses links são para chamar pastaas de estilização para o site -->
+    <!-- esses links são para chamar pastas de estilização para o site -->
     <link rel="stylesheet" href="css/reset.css">
 
     <link rel="stylesheet" href="css/slick.css">
