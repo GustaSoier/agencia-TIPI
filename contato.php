@@ -51,6 +51,23 @@ try {
     $tel = $_POST['tel'];
     $mens = $_POST['mens'];
 
+
+    require_once('admin/class/contato.php');
+
+    $contato = new ContatoClass();
+
+    $contato->nomeContato = $nome;
+    $contato->emailContato = $email;
+    $contato->foneContato = $tel;
+    $contato->mensContato = $mens;
+
+    date_default_timezone_set('America/Sao_Paulo');
+
+    $contato->dataContato = date('Y-m-d');
+    $contato->horaContato = date('H:i:s');
+
+    $contato->inserirContato();
+
     $mail->isHTML(true);                               
     $mail->Subject = 'Site agência TIPI';
     $mail->Body    = "
@@ -68,11 +85,11 @@ try {
     ";
 
     $mail->send();
-    $ok = 1;
-    // echo 'Mensagem enviada com SUCESSO!';
-} catch (Exception $e) {
     $ok = 2;
-    echo "ERRROOO... Tente mais tarde: {$mail->ErrorInfo}";
+    // echo "Mensagem enviada com SUCESSO!";
+} catch (Exception $e) {
+    $ok = 1;
+    // echo "ERRROOO... Tente mais tarde: {$mail->ErrorInfo}";
 }
 }
 ?>
