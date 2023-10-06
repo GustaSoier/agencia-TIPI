@@ -63,12 +63,10 @@ header .sair{
     align-items: center;
     color: black;
     border-radius: 20px;
-
 }
 
 header .sair:hover{
     background-color: rgb(143, 143, 143);
-    padding: 0 10px;
     transition: .4s;
 }
 

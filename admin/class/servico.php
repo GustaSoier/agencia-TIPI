@@ -51,4 +51,27 @@ class ServicoClass
 
         return $lista;
     }
+
+    public function Inserir(){
+        $query = "INSERT INTO tblservico ( tituloServico,
+                                           imgServico,
+                                           altServico,
+                                           textoServico,
+                                           linkServico,
+                                           statusServico)
+                    VALUES
+                    ('".$this -> tituloServico."',
+                     '".$this -> imgServico."',
+                      '".$this -> altServico."',
+                       '".$this -> textoServico."',
+                        '".$this -> linkServico."'
+                        '".$this -> statusServico."');";
+
+
+        $conn = Conexao::LigarConexao();
+        echo "<script>document.location='index.php?p=servico'</script>";
+    }
+    
 }
+
+
