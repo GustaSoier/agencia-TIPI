@@ -7,7 +7,7 @@
 
     <div>
         <h2><?php echo $linha['tituloServico'] ?></h2>
-        <img src="img/<?php echo $linha['imgServico'] ?>" alt="erviço Agência TIPI">
+        <img src="img/<?php echo $linha['imgServico'] ?>" alt="Serviço Agência TIPI">
         <p><?php echo $linha ['textoServico'] ?></p>
         <button href="<?php echo $linha['linkServico']
         ?>"> Saiba mais</button>

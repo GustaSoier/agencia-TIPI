@@ -1,6 +1,3 @@
- /* th, td{
-    border: 1px solid #333;
-} */
 
 caption{
     font-size: 30px;
@@ -41,4 +38,10 @@ a{
 
 .btn-atualizar:hover{
     background-color: rgb(111, 255, 123);
+}
+
+.btn-inserir{
+    background-color: aqua;
+    width: 100px;
+    height: 125px;
 }

@@ -10,9 +10,11 @@
 <div>
     <!-- criar tabela -->
     <table>
+        
         <!-- titulo da tabela -->
         <caption>Listar Serviços</caption>
         <!-- criar cabeçario -->
+
         <thead>
             <!-- linha da tabela -->
             <tr>
@@ -20,10 +22,10 @@
                 <th>ID</th>
                 <th>TITULO</th>
                 <th>IMG</th>
-                <th>ALT</th>
                 <th>TEXTO</th>
                 <th>LINK</th>
                 <th>STATUS</th>
+                <th>INSERIR</th>
                 <th>ATUALIZAR</th>
                 <th>DESATIVAR</th>
             </tr>
@@ -33,11 +35,11 @@
             <tr>
                 <td><?php echo $linha['idServico']?></td>
                 <td><?php echo $linha['tituloServico']?></td>
-                <td><?php echo $linha['imgServico']?></td>
-                <td><?php echo $linha['altServico']?></td>
+                <td><?php echo '<img src="../img/' . $linha['imgServico'] .'">' ?></td>      
                 <td><?php echo $linha['textoServico']?></td>
                 <td><?php echo $linha['linkServico']?></td>
                 <td><?php echo $linha['statusServico']?></td>
+                <td class="btn-inserir"><a href="index.php?p=servico&s=inserir">INSERIR</a></td>
                 <td class="btn-atualizar"><a href="index.php?p=servico&s=atualizar">ATUALIZAR</a></td>
                 <td class="btn-desativar"><a href="index.php?p=servico&s=desativar">DESATIVAR</a></td>
             </tr>

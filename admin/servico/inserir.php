@@ -5,9 +5,9 @@
         require_once('class/servico.php');
 
         $tituloServico = $_POST['tituloServico'];
-        $textoServico = $_post['textoServico'];
-        $linkServico = $_post['linkServico'];
-        $statusServico = $_post['statusServico'];
+        $textoServico = $_POST['textoServico'];
+        $linkServico = $_POST['linkServico'];
+        $statusServico = $_POST['statusServico'];
 
         $arquivo = $_FILES['imgServico'];
         
@@ -15,7 +15,7 @@
             throw new Exception('Error' . $arquivo['error']);
         }
 
-        if(move_uploaded_file($arquivo['tmp_name'], '../img/servico' . $arquivo['name'])){
+        if(move_uploaded_file($arquivo['tmp_name'], '../img/' . $arquivo['name'])){
             $imgServico = 'servico/' . $arquivo['name'];
         }
         else{
@@ -24,13 +24,11 @@
 
         $servico = new ServicoClass();
 
-        $servico -> $tituloServico = $tituloServico;
-        $servico -> $imgServico = $imgServico;
-        $servico -> $altServico =  $tituloServico;
-        $servico -> $textoServico = $textoServico;
-        $servico -> $linkServico = $linkServico;
-        $servico -> $statusServico = $statusServico;
-
+        $servico -> tituloServico = $tituloServico;
+        $servico -> imgServico = $imgServico;
+        $servico -> textoServico = $textoServico;
+        $servico -> linkServico = $linkServico;
+        $servico -> statusServico = $statusServico;
 
         $servico -> Inserir();
 
@@ -104,11 +102,11 @@
     }
 
     input[type=checkbox]+label::before {
-        content: "Ativo";
+        content: "Inativo";
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #2bee11;
+        background-color: red;
         height: 60px;
         width: 110px;
         border-radius: 10px;
@@ -123,10 +121,17 @@
     }
 
     input[type=checkbox]:checked+label::before {
-        content: "Inativo";
-        background-color: red;
+        content: "Ativo";
+        background-color: #2bee11;
         color: white;
         cursor: pointer;
+    }
+
+    .div-statusInserir{
+        align-self: center;
+        width: 100px;
+        height: 200px;
+        background-color: red;
     }
 
     .foto-preview{
@@ -167,6 +172,15 @@
         background-color: #0056b3;
     }
 
+    .btn-inserir{
+        display: flex;
+
+    }
+
+    .btn-inserir a{
+        align-self: flex-end;
+    }
+
 </style>
 
 
@@ -177,34 +191,31 @@
 </div>
 
 <div class="container-inserir">
-    <form action="index.php?p=servico&s=inserir" method="POST" enctype="multipart/form-data0">
+    <form action="index.php?p=servico&s=inserir" method="POST" enctype="multipart/form-data">
 
 
             <label for="foto">Escolher Foto:</label>
             <div class="foto-preview">
                 <img src="img/avatar.png" alt="" id="imagemExibida">
             </div>
+
             <!-- <div class="foto-preview" id="foto-preview"></div> -->
-            <input type="file" id="inputImagem" name="foto" required>
+            <input type="file" id="inputImagem" name="imgServico" required>
             <label for="foto" class="btn-foto">Selecione uma imagem:</label>
         
-
             <label for="titulo">Título do Serviço:</label>
-            <input type="text" id="titulo" name="titulo" required>
+            <input type="text" id="tituloServico" name="tituloServico" required>
         
             <h3>Status Serviço:</h3>
-            <input type="checkbox" id="status" name="status" value="1" required>
-
-                <label for="status"></label>
-
-
+            <input type="checkbox" id="status" name="statusServico" value="1" required>
+             <label for="status"></label>
 
             <label for="texto">Texto do Serviço:</label>
-            <textarea id="texto" name="texto" required></textarea>
+            <textarea id="texto" name="textoServico" required></textarea>
         
 
             <label for="link">Link do Serviço:</label>
-            <input type="text" id="link" name="link" required>
+            <input type="text" id="link" name="linkServico" required>
         
         <button type="submit">Inserir</button>
     </form>

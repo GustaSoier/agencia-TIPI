@@ -1,4 +1,4 @@
- <!-- <?php
+ <!-- 
 
 // require_once('conexao.php');
 
@@ -20,8 +20,7 @@
 //         $lista = $resultado -> fetchAll();
 //         return $lista;
 //     }
-// }
-?> -->
+// }-->
 
 <?php
 
@@ -44,7 +43,7 @@ class ServicoClass
 
     // MÉTODOS
     public function listar(){
-        $query = "SELECT * FROM tblservico WHERE statusServico = 1 ORDER BY tituloServico ASC;";
+        $query = "SELECT * FROM tblservico WHERE statusServico = 1 ORDER BY idServico ASC;";
         $conn = Conexao::LigarConexao();
         $resultado = $conn->query($query);
         $lista = $resultado->fetchAll();
@@ -53,22 +52,21 @@ class ServicoClass
     }
 
     public function Inserir(){
-        $query = "INSERT INTO tblservico ( tituloServico,
+        $query = "INSERT INTO tblservico (tituloServico,
                                            imgServico,
-                                           altServico,
                                            textoServico,
                                            linkServico,
                                            statusServico)
                     VALUES
                     ('".$this -> tituloServico."',
                      '".$this -> imgServico."',
-                      '".$this -> altServico."',
                        '".$this -> textoServico."',
-                        '".$this -> linkServico."'
+                        '".$this -> linkServico."',
                         '".$this -> statusServico."');";
 
 
         $conn = Conexao::LigarConexao();
+        $conn->exec($query);
         echo "<script>document.location='index.php?p=servico'</script>";
     }
     
