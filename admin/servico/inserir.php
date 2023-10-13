@@ -196,7 +196,7 @@
 
             <label for="foto">Escolher Foto:</label>
             <div class="foto-preview">
-                <img src="img/avatar.png" alt="" id="imagemExibida">
+                <img src="img/sem-foto.svg" alt="" id="imagemExibida">
             </div>
 
             <!-- <div class="foto-preview" id="foto-preview"></div> -->

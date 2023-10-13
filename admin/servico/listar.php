@@ -35,13 +35,13 @@
             <tr>
                 <td><?php echo $linha['idServico']?></td>
                 <td><?php echo $linha['tituloServico']?></td>
-                <td><?php echo '<img src="../img/' . $linha['imgServico'] .'">' ?></td>      
+                <td><?php echo '<img src="./img/' . $linha['imgServico'] .'">' ?></td>      
                 <td><?php echo $linha['textoServico']?></td>
                 <td><?php echo $linha['linkServico']?></td>
                 <td><?php echo $linha['statusServico']?></td>
                 <td class="btn-inserir"><a href="index.php?p=servico&s=inserir">INSERIR</a></td>
-                <td class="btn-atualizar"><a href="index.php?p=servico&s=atualizar">ATUALIZAR</a></td>
-                <td class="btn-desativar"><a href="index.php?p=servico&s=desativar">DESATIVAR</a></td>
+                <td class="btn-atualizar"><a href="index.php?p=servico&s=atualizar&id=<?php echo $linha['idServico']?>">ATUALIZAR</a></td>
+                <td class="btn-desativar"><a href="index.php?p=servico&s=desativar&id=<?php echo $linha['idServico']?>">DESATIVAR</a></td>
             </tr>
             <?php endforeach ?>
         </tbody>
