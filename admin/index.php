@@ -1,3 +1,20 @@
+<?php
+
+    session_start();
+
+    if (!isset($_SESSION['login'])) {
+        header("Location:login.php");
+    }
+
+    require_once('class/login.php');
+    $usuario = new Login();
+    $usuario -> idUsuario = $_SESSION['idUser'];
+    $dadosUsuario = $usuario -> VerificarLogin();
+
+    var_dump($dadosUsuario);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

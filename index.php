@@ -2,7 +2,6 @@
     require_once('admin/class/servico.php');
     $listaServico = new ServicoClass();
     $listar = $listaServico ->Listar();
-    // var_dump($listar); 
 ?>
 
 
@@ -48,7 +47,7 @@
 </footer>
     
 
-    <!-- aqui é pra chamar o arquivo js da biblioteca -->
+    <!-- aqui é pra chamar o aquivo js da biblioteca -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
     <!-- aqui é pra chamar o arquivo js de animaçoes e precisa ser puxar da biblioteca para acha-lo -->

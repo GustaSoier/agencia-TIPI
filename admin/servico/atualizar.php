@@ -16,7 +16,7 @@
         $linkServico = $_POST['linkServico'];
         $statusServico = $_POST['statusServico'];
 
-        if(!empty($_FILES['imgservico']['name'])){
+        if(!empty($_FILES['imgServico']['name'])){
 
             $arquivo = $_FILES['imgServico'];
 
@@ -207,7 +207,7 @@
 
             <label for="foto">Escolher Foto:</label>
             <div class="foto-preview">
-                <img src="<?php echo '../img/' . $servico -> imgServico ?>" alt="" id="imagemExibida">
+                <img src="<?php echo './img/' . $servico -> imgServico ?>" alt="" id="imagemExibida">
             </div>
 
             <!-- <div class="foto-preview" id="foto-preview"></div> -->

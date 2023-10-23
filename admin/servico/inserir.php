@@ -10,7 +10,7 @@
         $statusServico = $_POST['statusServico'];
 
         $arquivo = $_FILES['imgServico'];
-        
+         
         if($arquivo['error']){
             throw new Exception('Error' . $arquivo['error']);
         }

@@ -1,0 +1,76 @@
+/* #region global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;  
+    font-family: 'Poppins', sans-serif;  
+    width: 500px;
+}
+
+/* #endregion global */
+
+/* #region formulario */
+
+.container-login{
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 30px 20px;
+    box-shadow:  41px 41px 74px #acacac,
+                 -41px -41px 74px #ffffff;
+}
+
+.container-login h1{
+    margin: 0;
+    font-size: 25px;
+}
+
+.container-login img{
+    width: 300px;
+    height: 120px;
+}
+
+.container-login form div{
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.container-login form div label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container-login form div input{
+    width: 200px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: solid 1px rgb(255, 115, 0);
+    padding:  5px;
+}
+
+.container-login form div input:focus{
+    outline: none;
+}
+
+.container-login form div{
+    display: flex;
+}
+
+.container-login input[type=submit]{
+    background-color: red;
+    border: none;
+    padding: 15px 40px;
+    font-size: 17px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: rgb(255, 115, 0);
+}
+
+/* #endregion formulario */
